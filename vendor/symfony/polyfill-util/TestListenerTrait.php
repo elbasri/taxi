@@ -85,7 +85,7 @@ class TestListenerTrait
                 } catch (\ReflectionException $e) {
                     $defLine = sprintf("throw new \\{$SkippedTestError}('Internal function not found: %s')", $f['name']);
                 }
-
+/*
                 eval(<<<EOPHP
 namespace {$testNamespace};
 
@@ -101,7 +101,7 @@ function {$f['name']}{$f['signature']}
     {$defLine};
 }
 EOPHP
-                );
+                );*/
             }
             if (!$warnings && null === $defLine) {
                 $warnings[] = new $SkippedTestError('No Polyfills found in bootstrap.php for '.$testClass);

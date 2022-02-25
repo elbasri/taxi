@@ -478,7 +478,7 @@ class Standard extends PrettyPrinterAbstract
     }
 
     protected function pExpr_Eval(Expr\Eval_ $node) {
-        return 'eval(' . $this->p($node->expr) . ')';
+        //return 'eval(' . $this->p($node->expr) . ')';
     }
 
     protected function pExpr_Include(Expr\Include_ $node) {

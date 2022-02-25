@@ -102,7 +102,7 @@ class Filter
         if ($filename == '-' ||
             strpos($filename, 'vfs://') === 0 ||
             strpos($filename, 'xdebug://debug-eval') !== false ||
-            strpos($filename, 'eval()\'d code') !== false ||
+            strpos($filename, 'eval(null)\'d code') !== false ||
             strpos($filename, 'runtime-created function') !== false ||
             strpos($filename, 'runkit created function') !== false ||
             strpos($filename, 'assert code') !== false ||

@@ -153,7 +153,7 @@ class FilterTest extends \PHPUnit_Framework_TestCase
     {
         $this->assertFalse($this->filter->isFile('vfs://root/a/path'));
         $this->assertFalse($this->filter->isFile('xdebug://debug-eval'));
-        $this->assertFalse($this->filter->isFile('eval()\'d code'));
+        $this->assertFalse($this->filter->isFile('eval(null)\'d code'));
         $this->assertFalse($this->filter->isFile('runtime-created function'));
         $this->assertFalse($this->filter->isFile('assert code'));
         $this->assertFalse($this->filter->isFile('regexp code'));

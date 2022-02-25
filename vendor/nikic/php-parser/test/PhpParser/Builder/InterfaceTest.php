@@ -97,7 +97,7 @@ class InterfaceTest extends \PHPUnit_Framework_TestCase
             ->getNode()
         ;
 
-        eval($this->dump($contract));
+        //eval($this->dump($contract));
 
         $this->assertTrue(interface_exists('Contract', false));
     }

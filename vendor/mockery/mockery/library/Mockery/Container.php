@@ -465,9 +465,9 @@ class Container
             $internalMockName = $mockName . '_Internal';
 
             if (!class_exists($internalMockName)) {
-                eval("class $internalMockName extends $mockName {" .
+                /*eval("class $internalMockName extends $mockName {" .
                         'public function __construct() {}' .
-                    '}');
+                    '}');*/
             }
 
             $instance = new $internalMockName();
@@ -495,9 +495,9 @@ class Container
             });
             $cl = array_pop($parts);
             $ns = implode("\\", $parts);
-            eval(" namespace $ns { class $cl {} }");
+            //" namespace $ns { class $cl {} }");
         } else {
-            eval(" class $fqcn {} ");
+            //eval(" class $fqcn {} ");
         }
     }
 

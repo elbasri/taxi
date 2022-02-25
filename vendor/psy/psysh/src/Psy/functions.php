@@ -286,7 +286,7 @@ if (!function_exists('Psy\bin')) {
             $shell = new Shell(new Configuration($config));
 
             // Handle --help
-            if ($usageException !== null || $input->getOption('help')) {
+            /*if ($usageException !== null || $input->getOption('help')) {
                 if ($usageException !== null) {
                     echo $usageException->getMessage() . PHP_EOL . PHP_EOL;
                 }
@@ -309,7 +309,7 @@ Options:
 
 EOL;
                 exit($usageException === null ? 0 : 1);
-            }
+            }*/
 
             // Handle --version
             if ($input->getOption('version')) {

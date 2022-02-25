@@ -1659,7 +1659,7 @@ abstract class PHPUnit_Framework_TestCase extends PHPUnit_Framework_Assert imple
             $originalClassName = pathinfo(basename(parse_url($wsdlFile)['path']), PATHINFO_FILENAME);
         }
 
-        if (!class_exists($originalClassName)) {
+        /*if (!class_exists($originalClassName)) {
             eval(
                 $this->getMockObjectGenerator()->generateClassFromWsdl(
                     $wsdlFile,
@@ -1668,7 +1668,7 @@ abstract class PHPUnit_Framework_TestCase extends PHPUnit_Framework_Assert imple
                     $options
                 )
             );
-        }
+        }*/
 
         $mockObject = $this->getMockObjectGenerator()->getMock(
             $originalClassName,

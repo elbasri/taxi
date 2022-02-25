@@ -245,8 +245,9 @@ class Expectation implements ExpectationInterface
                 case 'Traversable':
                 case 'Generator':
                     // Remove eval() when minimum version >=5.5
-                    $generator = eval('return function () { yield; };');
-                    return $generator();
+                    //$generator = eval('return function () { yield; };');
+                    //return $generator();
+                    return "";
 
                 default:
                     return \Mockery::mock($type);

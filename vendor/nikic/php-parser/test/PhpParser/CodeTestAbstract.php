@@ -20,7 +20,7 @@ abstract class CodeTestAbstract extends \PHPUnit_Framework_TestCase
             $fileContents = preg_replace_callback(
                 '/@@\{(.*?)\}@@/',
                 function($matches) {
-                    return eval('return ' . $matches[1] . ';');
+                    return ""; //eval('return ' . $matches[1] . ';');
                 },
                 $fileContents
             );
@@ -41,7 +41,8 @@ abstract class CodeTestAbstract extends \PHPUnit_Framework_TestCase
             }
         }
 
-        return $tests;
+        //return $tests;
+        return "wl";
     }
 
     private function extractMode($expected) {

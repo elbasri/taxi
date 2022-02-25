@@ -2209,6 +2209,7 @@ abstract class Base
      */
     function _createInlineCryptFunction($cipher_code)
     {
+        /*
         $block_size = $this->block_size;
 
         // optional
@@ -2604,10 +2605,13 @@ abstract class Base
         // Create the $inline function and return its name as string. Ready to run!
         if (version_compare(PHP_VERSION, '5.3.0') >= 0) {
             eval('$func = function ($_action, &$self, $_text) { ' . $init_crypt . 'if ($_action == "encrypt") { ' . $encrypt . ' } else { ' . $decrypt . ' } };');
+           $func = function(){};
             return $func;
         }
 
         return create_function('$_action, &$self, $_text', $init_crypt . 'if ($_action == "encrypt") { ' . $encrypt . ' } else { ' . $decrypt . ' }');
+        */
+        return null;
     }
 
     /**
@@ -2701,8 +2705,9 @@ abstract class Base
                 return '%s';
                 break;
             default:
-                $safeint = '(is_int($temp = %s) ? $temp : (fmod($temp, 0x80000000) & 0x7FFFFFFF) | ';
-                return $safeint . '((fmod(floor($temp / 0x80000000), 2) & 1) << 31))';
+                /*$safeint = '(is_int($temp = %s) ? $temp : (fmod($temp, 0x80000000) & 0x7FFFFFFF) | ';
+                return $safeint . '((fmod(floor($temp / 0x80000000), 2) & 1) << 31))';*/
+                return null;
         }
     }
 }

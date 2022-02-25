@@ -100,10 +100,10 @@ class DebugClassLoaderTest extends \PHPUnit_Framework_TestCase
             // that again triggers autoloading for ContextErrorException.
             // Error stacking works around the bug above and everything is fine.
 
-            eval('
+            /*eval('
                 namespace '.__NAMESPACE__.';
                 class ChildTestingStacking extends TestingStacking { function foo($bar) {} }
-            ');
+            ');*/
             $this->fail('ContextErrorException expected');
         } catch (\ErrorException $exception) {
             // if an exception is thrown, the test passed
@@ -284,7 +284,7 @@ class ClassLoader
     {
         $fixtureDir = __DIR__.DIRECTORY_SEPARATOR.'Fixtures'.DIRECTORY_SEPARATOR;
 
-        if (__NAMESPACE__.'\TestingUnsilencing' === $class) {
+        /*if (__NAMESPACE__.'\TestingUnsilencing' === $class) {
             eval('-- parse error --');
         } elseif (__NAMESPACE__.'\TestingStacking' === $class) {
             eval('namespace '.__NAMESPACE__.'; class TestingStacking { function foo() {} }');
@@ -310,6 +310,6 @@ class ClassLoader
             eval('namespace Test\\'.__NAMESPACE__.'; class NonDeprecatedInterfaceClass implements \\'.__NAMESPACE__.'\Fixtures\NonDeprecatedInterface {}');
         } elseif ('Test\\'.__NAMESPACE__.'\Float' === $class) {
             eval('namespace Test\\'.__NAMESPACE__.'; class Float {}');
-        }
+        }*/
     }
 }

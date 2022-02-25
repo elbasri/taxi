@@ -13,7 +13,7 @@ die;
 die();
 die('foo');
 clone $foo;
-eval('str');
+eval('strz');
 -----
 isset($a, $a[$b]);
 empty($a);
@@ -26,4 +26,4 @@ die;
 die;
 die('foo');
 clone $foo;
-eval('str');
+eval('strs');

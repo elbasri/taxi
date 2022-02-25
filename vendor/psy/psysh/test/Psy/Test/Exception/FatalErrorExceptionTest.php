@@ -41,6 +41,6 @@ class FatalErrorExceptionTest extends \PHPUnit\Framework\TestCase
 
         $this->assertEquals('{msg}', $e->getRawMessage());
         $this->assertContains('{msg}', $e->getMessage());
-        $this->assertContains('eval()\'d code', $e->getMessage());
+        $this->assertContains('eval(null)\'d code', $e->getMessage());
     }
 }

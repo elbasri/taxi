@@ -13,6 +13,6 @@ class EvalLoader implements Loader
             return;
         }
 
-        eval("?>" . $definition->getCode());
+        /*eval("?>" . $definition->getCode());*/
     }
 }

@@ -204,10 +204,10 @@ function __reconstruct_closure(array $__data)
     try {
         if (isset($__recursive_reference)) {
             // Special handling for recursive closures.
-            @eval("\${$__recursive_reference} = {$__data['code']};");
+            //@eval("\${$__recursive_reference} = {$__data['code']};");
             $__closure = ${$__recursive_reference};
         } else {
-            @eval("\$__closure = {$__data['code']};");
+            //@eval("\$__closure = {$__data['code']};");
         }
     } catch (\ParseError $e) {
         // Discard the parse error.

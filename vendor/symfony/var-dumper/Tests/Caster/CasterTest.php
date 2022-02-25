@@ -155,7 +155,7 @@ class CasterTest extends \PHPUnit_Framework_TestCase
      */
     public function testAnonymousClass()
     {
-        $c = eval('return new class extends stdClass { private $foo = "foo"; };');
+        /*$c = eval('return new class extends stdClass { private $foo = "foo"; };');
 
         $this->assertDumpMatchesFormat(
             <<<'EOTXT'
@@ -175,6 +175,6 @@ EOTXT
 }
 EOTXT
             , $c
-        );
+        );*/
     }
 }
